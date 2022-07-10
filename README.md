@@ -16,9 +16,9 @@
 <div id='id-description'/>  
 
 ### Description
-It is a README.md generator  
+Created a commandline README.md generator 
 
-JavaScript,HTML,CSS,ES6,jQuery,Bootstrap,Node
+JavaScript,Node
 
 <div id='id-motivation'/>   
 
@@ -28,27 +28,25 @@ To make life a little easier
 <div id='id-installation'/>   
 
 ### Installation
-To save me some time
+NPM install was needed to use this project
 
 <div id='id-about'/>   
 
 ### About
 It helps to create a professional README.md faster  
 
-I learned about static and object instances  
+I learned about static, node, and object instances  
 
-My personality
 
 <div id='id-license'/>   
 
 ### License
 
- GNUGPLV3
+Not applicable 
 
  <div id='id-questions'/>   
 
 ### Questions and Contact
-[View my Github profile](www.github.com)  
 
 Please feel free to reach me with any questions:  
 michelle.douma@gmail.com
