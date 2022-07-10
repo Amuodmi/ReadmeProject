@@ -54,9 +54,9 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Which type of license?',
-        choices:['MIT', 'ISC', 'GNUPLv3'],
+        choices:['MIT', 'ISC', 'GNUGPLv3'],
         filter (val){
-          return val.toLowerCase();
+          return val.toUpperCase();
         }
       },
       {

@@ -3,20 +3,20 @@ class MarkDown {
 
   static licenseImage(license) {
     const images = {
-      mit: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-      isc: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-     gnugpl3: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
+      MIT: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+      ISC: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+     GNUGPLV3: '[![License: GNUGPLV3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
   }
   return images[license];
 }
 
 static licenseImageLink(license){
   const licenseLink = {
-      mit: '[MIT](https://chooselicense.com/licenses/mit/)',
-      isc: '[ISC](https://chooselicense.com/licenses/isc/)',
-      gnugpl3: '[GNUGPLv3](https://chooselicense.com/licenses/gpl-3.0/'
+      MIT: '[![$license}](https://img.shields.io/badge/License-MIT-yellow)]',
+      ISC: '[![$license}](https://img.shields.io/badge/License-ISC-blue.svg)]',
+      GNUGPLV3: '[![$license}](https://img.shields.io/badge/License-GPLv3-blue.svg)]'
   }
-  return licenseLink(license);
+  return licenseLink;
 }
 
 static licenseImageSection(license){
@@ -41,36 +41,52 @@ ${this.licenseImage(answers.license)}
      
 ## Table of Contents
 
-- [Project Description](#project-description)
-- [Motivation](#motivation)
-- [Installation](#installation)
-- [About the Project](#about-the-project)
-- [License](#license)
-- [Questions and Contact](#questions-and-contact)
+- [Project Description](#id-description)
+- [Motivation](#id-motivation)
+- [Installation](#id-installation)
+- [About the Project](#id-about)
+- [License](#id-license)
+- [Questions and Contact](#id-questions)
+
+<div id='id-description'/>  
 
 ### Description
-${answers.description}
+${answers.description}  
+
 ${answers.languages}
+
+<div id='id-motivation'/>   
 
 ### Motivation
 ${answers.motivation}
 
+<div id='id-installation'/>   
+
 ### Installation
 ${answers.build}
 
+<div id='id-about'/>   
+
 ### About
-${answers.problem}
-${answers.learn}
+${answers.problem}  
+
+${answers.learn}  
+
 ${answers.out}
+
+<div id='id-license'/>   
 
 ### License
 
-${this.licenseImageSection(answers.license)}
+ ${answers.license}
 
-### Questions
+ <div id='id-questions'/>   
+
+### Questions and Contact
 [View my Github profile](${answers.link})  
 
-Please feel free to reach me with any questions:${answers.email}
+Please feel free to reach me with any questions:  
+${answers.email}
 
 
     `;
@@ -79,7 +95,3 @@ Please feel free to reach me with any questions:${answers.email}
 
   module.exports = MarkDown 
 
-
-
-  //goes under the License section:   ${this.licenseImageSection(answers.license)}
-  //goes under the title section:  ${this.licenseImage(answers.license)}
